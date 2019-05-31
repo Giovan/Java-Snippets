@@ -1,4 +1,4 @@
-package availableProcessors;
+package com.snippets.availableProcessors;
 
 public class CPUCores {
 	public static void main(String[] args) {
