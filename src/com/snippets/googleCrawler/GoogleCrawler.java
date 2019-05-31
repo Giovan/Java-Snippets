@@ -75,11 +75,11 @@ public class GoogleCrawler {
 	 * @throws Exception
 	 */
 	public static List<String> parseLinks(final String html) throws Exception {
-		List<String> result = new ArrayList<String>();
-		String pattern1 = "<h3 class=\"r\"><a href=\"/url?q=";
-		String pattern2 = "\">";
-		Pattern p = Pattern.compile(Pattern.quote(pattern1) + "(.*?)" + Pattern.quote(pattern2));
-		Matcher m = p.matcher(html);
+		ArrayList<String> result = new ArrayList<String>();
+        String pattern1 = "<h3 class=\"r\"><a href=\"/url?q=";
+        String pattern2 = "\">";
+        Pattern p = Pattern.compile(Pattern.quote(pattern1) + "(.*?)" + Pattern.quote(pattern2));
+        Matcher m = p.matcher(html);
 		
 		while (m.find()) {
 			String domainName = m.group(0).trim();
@@ -94,7 +94,7 @@ public class GoogleCrawler {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		String searchTerm = "quarkus";
+		String searchTerm = "youtube";
 		System.out.println("Google Search Parser Tutorial");
 		
 		System.out.println("Searching for: " + searchTerm);
